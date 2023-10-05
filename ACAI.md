@@ -1,5 +1,4 @@
 ---
-layout: page
 title: ACAI
 permalink: /acai/
 ---
