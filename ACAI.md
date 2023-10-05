@@ -1,5 +1,6 @@
+---
 layout: page
-title: "ACAI"
+title: ACAI
 permalink: /acai/
-
+---
 # A cool ACAI logo 
