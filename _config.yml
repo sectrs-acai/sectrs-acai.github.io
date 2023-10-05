@@ -3,6 +3,6 @@ title: Acai
 description: updates coming soon!
 defaults:
   - scope:
-      path: ""
+      path: "acai"
     values:
       layout: default
