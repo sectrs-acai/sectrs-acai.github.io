@@ -1,5 +1,5 @@
 layout: page
 title: "ACAI"
-permalink: /acai
+permalink: /acai/
 
-# A cool ACAI logo coming soon...
+# A cool ACAI logo 
