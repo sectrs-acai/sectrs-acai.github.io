@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: Acai
-description: updates coming soon!
+description: Check out our code on Github
 defaults:
   - scope:
       path: "acai"
