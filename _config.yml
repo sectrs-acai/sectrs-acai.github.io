@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 title: Acai
 logo: /assets/img/acai_logo.png
-description: Check out our code on Github
+description: Protecting Accelerator Execution with Arm Confidential Computing Architecture
 is_project_page: true
 defaults:
   - scope:
