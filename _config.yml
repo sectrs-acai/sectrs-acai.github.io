@@ -2,6 +2,7 @@ theme: jekyll-theme-minimal
 title: Acai
 logo: /assets/img/acai_logo.png
 description: Check out our code on Github
+is_project_page: true
 defaults:
   - scope:
       path: "acai"
