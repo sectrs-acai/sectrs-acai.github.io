@@ -1,5 +1,6 @@
 theme: jekyll-theme-minimal
 title: Acai
+logo: /assets/img/logo.png
 description: Check out our code on Github
 defaults:
   - scope:
