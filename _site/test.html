@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>Acai</title>
+    <meta name="description" content="Protecting Accelerator execution with Arm CCA">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Supraja Sridhara">
+    <meta itemprop="name" content="Acai">
+
+    <meta property="og:url" content="http://localhost:4000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Acai" />
+    <meta property="og:description" content="Protecting Accelerator execution with Arm CCA" />
+    <meta property="og:image" content="http://localhost:4000/images/favicon.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@sectrs_ethz" />
+    <meta name="twitter:title" content="Acai" />
+    <meta name="twitter:description" content="Protecting Accelerator execution with Arm CCA" />
+    <meta name="twitter:image" content="http://localhost:4000/images/favicon.png" />
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM feed">
+    <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="RSS feed">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/gridism.css">
+    <link rel="stylesheet" href="/assets/css/ionicons.css">    
+    <style>
+        .blog-column{
+            background: #f7f7e6;
+        }
+    </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copyable BibTeX Popup</title>
+<style>
+    /* Basic styling for the popup */
+    .popup {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    /* Overlay styling */
+    .overlay {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    /* Close button styling */
+    .close-btn {
+        background-color: white;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        float: right;
+    }
+
+    /* Copy button styling */
+    .copy-btn {
+        background-color: #1c571e;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+
+<body class="wrap wider">
+	<div class="grid">
+		<div id="/home" class="unit one-third">
+			<div class="grid">
+				<div class="unit whole" id="/home">
+					<h1>
+						<img src="/images/acai_logo.png" alt="Site Logo" style="vertical-align: middle; height: 40px; width: auto;">
+						Acai
+					</h1>
+					<p>Protecting Accelerator execution with Arm CCA</p>
+				</div>
+				<div class="unit whole" id="/contact">
+					<!-- <a href="https://twitter.com/sectrs_ethz" class="twitter-icon btn"><i class="icon ion-social-twitter"></i></a> -->
+					<a href="https://github.com/sectrs-acai" class="github-icon btn"><i class="icon ion-social-github"></i></a>
+					<a href="mailto:supraja.sridhara@inf.ethz.ch" class="mail-icon btn"><i class="icon ion-email"></i></a>
+
+					<button class="icon-btn" onclick="openPopup()">
+						<img src="/images/cite.png" alt="Site Logo" style="vertical-align: middle; height: 10px; width: auto;">
+					</button> 
+					<!-- <a href="feed.xml" class="rss-icon btn"><i class="icon ion-social-rss"></i></a> -->
+				</div>
+				<div class="unit whole hide-on-mobiles" id="/projects">
+					<!-- <h4>Projects</h4>
+<ul>
+    
+    <li>
+      <p><a href="#">project 1</a><br><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</small></p>
+    </li>
+    
+    <li>
+      <p><a href="#">project 2</a><br><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</small></p>
+    </li>
+    
+    <li>
+      <p><a href="#">project 3</a><br><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</small></p>
+    </li>
+    
+</ul> -->
+				</div>
+				<div class="unit whole" id="/impressum">
+					<h4>Authors</h4>
+<ul>
+    <li>
+        <a href="https://suprajas.com/" target="_blank">Supraja Sridhara</a>
+    </li>
+    <li>
+        <a href="https://abertschi.ch/" target="_blank">Andrin Bertschi</a>
+    </li>
+    <li>
+        <a href="https://benschlueter.com/" target="_blank">Benedict Schlüter</a>
+    </li>
+    <li>
+        <a href="https://security.zauney.ch/" target="_blank">Mark Kuhne</a>
+    </li>
+    <li>
+        <a href="" target="_blank">Fabio Aliberti</a>
+    </li>
+    <li>
+        <a href="https://n.ethz.ch/~sshivaji/" target="_blank">Shweta Shinde</a>
+    </li>
+</ul>
+
+
+
+
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()"><img src="/images/close.png" style="vertical-align: middle; height: 30px; width: auto;"></button>
+    <h3>Copyable BibTeX Entry</h3>
+    <textarea id="bibtexEntry" rows="10" cols="50">@inproceedin{sridhara202acai,
+title={ACAI: Protecting Accelerator Execution with Arm Confidential Computing Architecture},
+author={Sridhara, Supraja and Bertschi, Andrin and Schl{\"u}ter, Benedict and Kuhne, Mark and Aliberti, Fabio and Shinde, Shweta},
+booktitle={33rd USENIX Security Symposium (USENIX Security 24)},
+url = {https://www.usenix.org/conference/usenixsecurity24/presentation/sridhara},
+publisher = {USENIX Association}
+}</textarea>
+    <br>
+    <button class="copy-btn" onclick="copyBibTeX()">Copy to Clipboard</button>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function copyBibTeX() {
+        var bibtexEntry = document.getElementById("bibtexEntry");
+        bibtexEntry.select();
+        bibtexEntry.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+            navigator.clipboard.writeText(bibtexEntry.value);
+            alert("BibTeX entry copied to clipboard!");
+        } catch (err) {
+            document.execCommand("copy");
+            alert("BibTeX entry copied to clipboard!");
+        }
+    }
+</script>
+
+				</div>
+			</div>
+		</div>
+		<div class="unit two-thirds blog-column">
+			<div class="grid">
+				<div class="unit whole" id="/blog">
+					<h2>Abstract</h2>
+				</div>
+				Trusted execution environments in several existing and upcoming CPUs demonstrate the success of confidential computing, with the caveat that tenants cannot securely use accelerators such as GPUs and FPGAs. In this paper, we reconsider the Arm Confidential Computing Architecture (CCA) design, an upcoming TEE feature in Armv9-A, to address this gap. We observe that CCA offers the right abstraction and mechanisms to allow confidential VMs to use accelerators as a first-class abstraction. We build ACAI, a CCA-based solution, with a principled approach of extending CCA security invariants to device-side access to address several critical security gaps. Our experimental results on GPU and FPGA demonstrate the feasibility of ACAI while maintaining security guarantees.
+				<!-- <div class="unit whole" id="/subscribe">
+					<p><a href="feed.xml">RSS</a> & <a href="atom.xml">ATOM</a> Feed<br>Built with Jekyll, Code on <a href="https://github.com/lukas-h/onepage">Github</a></p>
+				</div> -->
+			</div>
+
+			<div>
+				<img src="/images/overview.png" alt="Site Logo" style="vertical-align: middle; height: auto; width: auto;">
+			</div>
+
+			<div>
+				<h2> Acai is Open Source <img src="/images/usenixbadges-available.png" alt="Site Logo" style="vertical-align: middle; height: 50px; width: auto;">
+					<img src="/images/usenixbadges-functional.png" alt="Site Logo" style="vertical-align: middle; height: 50px; width: auto;">
+				</h2>
+				<p></p>
+				<img src="/images/escape.png" alt="Site Logo" style="vertical-align: middle; height: 250px; width: auto;">
+
+				<li><a href="https://github.com/sectrs-acai" class="github-icon btn"><i class="icon ion-social-github"></i> FVP implementation </a> </li> 
+			</div>
+
+		</div>
+
+		<!-- <div class="unit whole hide-on-desktops" id="/projects">
+			<!-- <h4>Projects</h4>
+<ul>
+    
+    <li>
+      <p><a href="#">project 1</a><br><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</small></p>
+    </li>
+    
+    <li>
+      <p><a href="#">project 2</a><br><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</small></p>
+    </li>
+    
+    <li>
+      <p><a href="#">project 3</a><br><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</small></p>
+    </li>
+    
+</ul> -->
+		</div> -->
+		<!-- <div class="unit whole hide-on-desktops" id="/impressum">
+			<h4>Authors</h4>
+<ul>
+    <li>
+        <a href="https://suprajas.com/" target="_blank">Supraja Sridhara</a>
+    </li>
+    <li>
+        <a href="https://abertschi.ch/" target="_blank">Andrin Bertschi</a>
+    </li>
+    <li>
+        <a href="https://benschlueter.com/" target="_blank">Benedict Schlüter</a>
+    </li>
+    <li>
+        <a href="https://security.zauney.ch/" target="_blank">Mark Kuhne</a>
+    </li>
+    <li>
+        <a href="" target="_blank">Fabio Aliberti</a>
+    </li>
+    <li>
+        <a href="https://n.ethz.ch/~sshivaji/" target="_blank">Shweta Shinde</a>
+    </li>
+</ul>
+
+
+
+
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()"><img src="/images/close.png" style="vertical-align: middle; height: 30px; width: auto;"></button>
+    <h3>Copyable BibTeX Entry</h3>
+    <textarea id="bibtexEntry" rows="10" cols="50">@inproceedin{sridhara202acai,
+title={ACAI: Protecting Accelerator Execution with Arm Confidential Computing Architecture},
+author={Sridhara, Supraja and Bertschi, Andrin and Schl{\"u}ter, Benedict and Kuhne, Mark and Aliberti, Fabio and Shinde, Shweta},
+booktitle={33rd USENIX Security Symposium (USENIX Security 24)},
+url = {https://www.usenix.org/conference/usenixsecurity24/presentation/sridhara},
+publisher = {USENIX Association}
+}</textarea>
+    <br>
+    <button class="copy-btn" onclick="copyBibTeX()">Copy to Clipboard</button>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function copyBibTeX() {
+        var bibtexEntry = document.getElementById("bibtexEntry");
+        bibtexEntry.select();
+        bibtexEntry.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+            navigator.clipboard.writeText(bibtexEntry.value);
+            alert("BibTeX entry copied to clipboard!");
+        } catch (err) {
+            document.execCommand("copy");
+            alert("BibTeX entry copied to clipboard!");
+        }
+    }
+</script>
+
+		</div> -->
+	</div>
+
+	<img src="/images/frankenstein.webp" alt="Site Logo" style="vertical-align: middle; height: 50px; width: auto;">
+
+</body>
+
+</html>

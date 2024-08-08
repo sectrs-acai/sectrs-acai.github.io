@@ -1,0 +1,66 @@
+<h4>Authors</h4>
+<ul>
+    <li>
+        <a href="https://suprajas.com/" target="_blank">Supraja Sridhara</a>
+    </li>
+    <li>
+        <a href="https://abertschi.ch/" target="_blank">Andrin Bertschi</a>
+    </li>
+    <li>
+        <a href="https://benschlueter.com/" target="_blank">Benedict Schlüter</a>
+    </li>
+    <li>
+        <a href="https://security.zauney.ch/" target="_blank">Mark Kuhne</a>
+    </li>
+    <li>
+        <a href="" target="_blank">Fabio Aliberti</a>
+    </li>
+    <li>
+        <a href="https://n.ethz.ch/~sshivaji/" target="_blank">Shweta Shinde</a>
+    </li>
+</ul>
+
+
+
+
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()"><img src="{{ "/images/close.png" | prepend: site.baseurl }}" style="vertical-align: middle; height: 30px; width: auto;"></button>
+    <h3>Copyable BibTeX Entry</h3>
+    <textarea id="bibtexEntry" rows="10" cols="50">@inproceedin{sridhara202acai,
+title={ACAI: Protecting Accelerator Execution with Arm Confidential Computing Architecture},
+author={Sridhara, Supraja and Bertschi, Andrin and Schl{\"u}ter, Benedict and Kuhne, Mark and Aliberti, Fabio and Shinde, Shweta},
+booktitle={33rd USENIX Security Symposium (USENIX Security 24)},
+url = {https://www.usenix.org/conference/usenixsecurity24/presentation/sridhara},
+publisher = {USENIX Association}
+}</textarea>
+    <br>
+    <button class="copy-btn" onclick="copyBibTeX()">Copy to Clipboard</button>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function copyBibTeX() {
+        var bibtexEntry = document.getElementById("bibtexEntry");
+        bibtexEntry.select();
+        bibtexEntry.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+            navigator.clipboard.writeText(bibtexEntry.value);
+            alert("BibTeX entry copied to clipboard!");
+        } catch (err) {
+            document.execCommand("copy");
+            alert("BibTeX entry copied to clipboard!");
+        }
+    }
+</script>

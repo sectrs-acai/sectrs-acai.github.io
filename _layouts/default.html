@@ -1,57 +1,74 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="og:image" content="https://sectrs-acai.github.io/assets/img/acai_logo_twitter.png">
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <link rel="twitter_logo" href="{{ "/assets/img/acai_logo_twitter.png" | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+<html lang="{{ site.isolang }}" itemscope itemtype="http://schema.org/WebPage">
 
-        {% if site.logo %}
-        <img src="{{site.logo | relative_url}}" alt="Logo" width='50' height='YYY' />
-        {% endif %}
+{% include head.html %}
 
-<!--         <p>{{ site.description | default: site.github.project_tagline }}</p>
- -->
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the our code on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
+<body class="wrap wider">
+	<div class="grid">
+		<div id="/home" class="unit one-third">
+			<div class="grid">
+				<div class="unit whole" id="/home">
+					<h1>
+						<img src="{{ "/images/acai_logo.png" | prepend: site.baseurl }}" alt="Site Logo" style="vertical-align: middle; height: 40px; width: auto;">
+						{{ site.title }}
+					</h1>
+					<p>{{ site.description }}</p>
+				</div>
+				<div class="unit whole" id="/contact">
+					<!-- <a href="https://twitter.com/{{ site.twitter_username }}" class="twitter-icon btn"><i class="icon ion-social-twitter"></i></a> -->
+					<a href="https://github.com/{{ site.github_username }}" class="github-icon btn"><i class="icon ion-social-github"></i></a>
+					<a href="mailto:{{ site.email }}" class="mail-icon btn"><i class="icon ion-email"></i></a>
 
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View our Code on GitHub </a></p>
-        {% endif %}
+					<button class="icon-btn" onclick="openPopup()">
+						<img src="{{ "/images/cite.png" | prepend: site.baseurl }}" alt="Site Logo" style="vertical-align: middle; height: 10px; width: auto;">
+					</button> 
+					<!-- <a href="feed.xml" class="rss-icon btn"><i class="icon ion-social-rss"></i></a> -->
+				</div>
+				<div class="unit whole hide-on-mobiles" id="/projects">
+					{% include projects.html %}
+				</div>
+				<div class="unit whole" id="/impressum">
+					{% include imprint.html %}
+				</div>
+			</div>
+		</div>
+		<div class="unit two-thirds blog-column">
+			<div class="grid">
+				<div class="unit whole" id="/blog">
+					<h2>Abstract</h2>
+				</div>
+				Trusted execution environments in several existing and upcoming CPUs demonstrate the success of confidential computing, with the caveat that tenants cannot securely use accelerators such as GPUs and FPGAs. In this paper, we reconsider the Arm Confidential Computing Architecture (CCA) design, an upcoming TEE feature in Armv9-A, to address this gap. We observe that CCA offers the right abstraction and mechanisms to allow confidential VMs to use accelerators as a first-class abstraction. We build ACAI, a CCA-based solution, with a principled approach of extending CCA security invariants to device-side access to address several critical security gaps. Our experimental results on GPU and FPGA demonstrate the feasibility of ACAI while maintaining security guarantees.
+				<!-- <div class="unit whole" id="/subscribe">
+					<p><a href="feed.xml">RSS</a> & <a href="atom.xml">ATOM</a> Feed<br>Built with Jekyll, Code on <a href="https://github.com/lukas-h/onepage">Github</a></p>
+				</div> -->
+			</div>
 
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        {% endif %}
-      </header>
-      <section>
+			<div>
+				<img src="{{ "/images/overview.png" | prepend: site.baseurl }}" alt="Site Logo" style="vertical-align: middle; height: auto; width: auto;">
+			</div>
 
-      {{ content }}
+			<div>
+				<h2> Acai is Open Source <img src="{{ "/images/usenixbadges-available.png" | prepend: site.baseurl }}" alt="Site Logo" style="vertical-align: middle; height: 50px; width: auto;">
+					<img src="{{ "/images/usenixbadges-functional.png" | prepend: site.baseurl }}" alt="Site Logo" style="vertical-align: middle; height: 50px; width: auto;">
+				</h2>
+				<p></p>
+				<img src="{{ "/images/escape.png" | prepend: site.baseurl }}" alt="Site Logo" style="vertical-align: middle; height: 250px; width: auto;">
 
-      </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+				<li><a href="https://github.com/sectrs-acai" class="github-icon btn"><i class="icon ion-social-github"></i> FVP implementation </a> </li> 
+			</div>
+
+		</div>
+
+		<!-- <div class="unit whole hide-on-desktops" id="/projects">
+			{% include projects.html %}
+		</div> -->
+		<!-- <div class="unit whole hide-on-desktops" id="/impressum">
+			{% include imprint.html %}
+		</div> -->
+	</div>
+
+	{% include foot.html %}
+
+</body>
+
 </html>

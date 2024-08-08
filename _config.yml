@@ -1,10 +1,30 @@
-theme: jekyll-theme-minimal
-title: Acai
-logo: /assets/img/acai_logo.png
-description: Protecting Accelerator Execution with Arm Confidential Computing Architecture
-is_project_page: true
-defaults:
-  - scope:
-      path: "acai"
-    values:
-      layout: default
+safe: false
+
+# build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+permalink: /:title
+
+title: "Acai"
+description: "Protecting Accelerator execution with Arm CCA"
+baseurl: ""
+url: "https://sectrs-acai.github.io" # replace by your site's url
+twitter_username: sectrs_ethz
+github_username:  sectrs-acai # (your name)
+accent: "#f7f7e6" # accent color for blog column
+
+
+
+author: "Supraja Sridhara"
+email: "supraja.sridhara@inf.ethz.ch"
+
+# google analytics tracking code, please change the value
+
+# language settings
+isolang: en
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md
